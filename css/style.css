@@ -1,0 +1,461 @@
+body {
+  background-color: var(--body-color);
+  font-family: "Inter", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  /* display: block; */
+}
+.custom-border-modern {
+  border-bottom: 1px solid color-mix(in oklab, #e5e7eb 50%, transparent);
+}
+.custom-bg-gray-modern {
+  background-color: color-mix(in oklab, #f9fafb 80%, transparent);
+}
+.w-20 {
+  width: calc(var(--spacing) * 20);
+}
+.h-20 {
+  width: calc(var(--spacing) * 20);
+}
+.fnt-sz-9 {
+  font-size: 9px;
+}
+.fnt-sz-10 {
+  font-size: 10px;
+}
+.fnt-sz-11 {
+  font-size: 11px;
+}
+.fnt-sz-12 {
+  font-size: 12px;
+}
+.fnt-sz-13 {
+  font-size: 13px;
+}
+.fnt-sz-14 {
+  font-size: 14px;
+}
+.fnt-sz-15 {
+  font-size: 15px;
+}
+.fnt-sz-18 {
+  font-size: 18px;
+}
+.fnt-sz-30 {
+  font-size: 30px;
+}
+.fnt-sz-60 {
+  font-size: 60px;
+}
+.border-grey-100 {
+  border: 2px solid var(--gray-100);
+}
+.border-grey-100 {
+  border: 2px solid var(--gray-100);
+}
+.h-150 {
+  height: 150px;
+}
+.p-20 {
+  padding: 10px 15px;
+}
+.w-h-26 {
+  width: 26px;
+  height: 26px;
+}
+.w-h-32 {
+  width: 32px;
+  height: 32px;
+}
+.w-h-38 {
+  width: 38px;
+  height: 38px;
+}
+.w-h-96 {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+}
+.pxy {
+  padding: 6px 10px;
+}
+.pxy-fav {
+  padding: 12px;
+}
+.btn-pxy {
+  padding: 10px 20px;
+  /* px-5 py-2 */
+}
+#navbar {
+  .logo-wrapper {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+  }
+  .addBtn {
+    border-radius: 12px;
+    padding: 8px 18px;
+    transition: all 0.2s;
+    &:hover {
+      transform: translateY(-3px);
+      --shadow-color: color-mix(in oklab, var(--violet-500) 25%, transparent);
+      box-shadow:
+        0 10px 25px -5px var(--shadow-color),
+        0 4px 12px -2px var(--shadow-color);
+    }
+  }
+
+  .nav-icons {
+    .icon {
+      width: 43px;
+      height: 43px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      background-color: transparent;
+      transition: all 0.5s;
+      &:hover {
+        color: var(--gray-700);
+        background-color: var(--gray-100);
+      }
+    }
+  }
+  .avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    border: 2px solid var(--gray-100);
+  }
+
+  .modal-body {
+    padding: 25px 17px;
+  }
+}
+#agenda {
+  margin-top: 90px;
+  /* sor 3ala tary2a tanya , fixed top doesnot working m3 el modal bootstrap */
+  .ctgry {
+    padding: 18px 25px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transition: all 0.2s;
+    &:hover {
+      box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    }
+  }
+  .ctgry-icon {
+    width: 47px;
+    height: 47px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quick-access {
+
+    /* padding: 15px 20px; */
+    .ctgry-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 13px;
+    }
+  }
+
+  .favourites-contacts , .emergency-contacts{
+    height: auto;
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .favourites-contacts::-webkit-scrollbar,
+  .emergency-contacts::-webkit-scrollbar{
+  display: none;
+  }
+
+}
+
+#contacts {
+  /* height: 500px; */
+  .search-bar {
+    position: relative;
+  }
+  .search-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+  }
+
+  .form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: var(--violet-500);
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.2);
+  }
+  .icon-wrapper {
+    width: 90px;
+    height: 90px;
+    border-radius: 14px;
+    font-size: 30px;
+  }
+  .empty-agenda {
+    height: 320px;
+    /* border-radius: 15px; */
+  }
+  .contact-card {
+    display: flex;
+  flex-direction: column;
+    /* position: relative; */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: all 0.1s;
+
+    /* بيتحرك جامد ليه الشادو في الهوفر  ؟ */
+    /* &:hover {
+      border: 1px solid var(--gray-200) !important;
+      box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    } */
+     /* .card-footer{
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 5%;
+
+      
+     } */
+    .contact-label {
+      width: 55px;
+      height: 55px;
+      font-size: 19px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .contact-avatar {
+      position: relative;
+    }
+    .c-badge {
+      position: absolute;
+      right: -8px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      font-size: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid white;
+    }
+    .fav-badge {
+      top: -6px;
+    }
+    .emg-badge {
+      bottom: -6px;
+    }
+    #contactCategoryEmg i {
+      margin-right: 4px;
+    }
+    .card-footer {
+      border-top: 1px solid var(--gray-100);
+
+      .actions {
+        .phone-btn {
+          transition: all 0.2s;
+          &:hover {
+            background-color: var(--emerald-100) !important;
+          }
+        }
+        .email-btn {
+          transition: all 0.2s;
+          &:hover {
+            background-color: var(--violet-100);
+            color: var(--amber-400);
+          }
+        }
+      }
+      .quick-actions-btns {
+        button {
+          /* margin-inline: 4px; */
+          padding: 8px 11px;
+          border-radius: 10px;
+        }
+        .fav-btn,
+        .emg-btn {
+          transition: all 0.3s;
+          &:hover {
+            background-color: var(--gray-100);
+          }
+        }
+        .fav-btn:hover {
+          color: var(--amber-400);
+        }
+        .emg-btn:hover {
+          color: var(--rose-500);
+        }
+        .edit-btn {
+          transition: all 0.3s;
+          &:hover {
+            background-color: var(--indigo-50);
+            color: var(--indigo-600);
+          }
+        }
+        .delete-btn {
+          transition: all 0.3s;
+          &:hover {
+            background-color: var(--rose-50);
+            color: var(--rose-600);
+          }
+        }
+        .fav-checked-btn{
+          transition: all 0.3s;
+          &:hover{
+            background-color: var(--amber-100);
+          }
+        }
+        .emg-checked-btn{
+          transition: all 0.3s;
+          &:hover{
+            background-color: var(--rose-100);
+          }
+        }
+      }
+    }
+  }
+
+  .quick-access {
+    .fav-contact,
+    .emg-contact,
+    .phone-icon {
+      transition: all 0.3s;
+      &:hover {
+        .phone-icon {
+          color: white;
+        }
+      }
+    }
+    .fav-contact {
+      &:hover {
+        background-color: var(--amber-50);
+        .phone-icon {
+          background-color: var(--emerald-500);
+        }
+      }
+    }
+    .emg-contact {
+      &:hover {
+        background-color: var(--rose-50);
+        .phone-icon {
+          background-color: var(--rose-500);
+        }
+      }
+    }
+  }
+}
+.upload-photo label {
+  cursor: pointer;
+}
+
+#contactForm ,#updateContactt {
+  .form-control:focus,
+  .form-select:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: var(--violet-500);
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+  }
+
+  .form-control,
+  .form-select {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    background-color: var(--gray-50);
+    border: var(--bs-border-width) solid var(--gray-300);
+    border-radius: 10px;
+    /* border-radius: var(--bs-border-radius); */
+    transition:
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+  }
+  input::placeholder {
+    font-size: 13.5px;
+    color: var(--gray-500);
+  }
+  textarea {
+    resize: none;
+  }
+  .form-btns {
+    button {
+      border-radius: 11px;
+    }
+  }
+  .btn {
+    background-color: var(--gray-100);
+    color: var(--gray-700);
+  }
+  .cancel-btn {
+    transition: all 0.3s;
+    &:hover {
+      background-color: var(--gray-200);
+    }
+  }
+
+  .save-btn {
+    transition: all 0.3s;
+
+    &:hover {
+      --shadow-color: color-mix(in oklab, var(--violet-500) 25%, transparent);
+      box-shadow:
+        0 10px 20px -5px var(--shadow-color),
+        0 4px 10px -2px var(--shadow-color);
+    }
+  }
+}
+/* edit x mark later */
+.btn-close {
+    --bs-btn-close-color: #6a7282;
+    /* --bs-btn-close-bg:none; */
+
+    --bs-btn-close-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414'/%3e%3c/svg%3e);
+    --bs-btn-close-opacity: 0.5;
+    --bs-btn-close-hover-opacity: 0.75;
+    --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    --bs-btn-close-focus-opacity: 1;
+    --bs-btn-close-disabled-opacity: 0.25;
+    box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    padding: .25em .25em;
+    color: var(--bs-btn-close-color);
+    background: transparent var(--bs-btn-close-bg) center / 1em auto no-repeat;
+    filter: var(--bs-btn-close-filter);
+    border: 0;
+    border-radius: .375rem;
+    opacity: var(--bs-btn-close-opacity);
+}
+
+
+
+/* .favContacts{
+  height: 100px;
+} */
+.sign{
+  width: 155px;
+  height: 100px;
+}
